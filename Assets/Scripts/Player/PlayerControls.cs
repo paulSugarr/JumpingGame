@@ -55,7 +55,7 @@ public class PlayerControls : MonoBehaviour
     }
     private void ContinousMove()
     {
-        if (Input.GetMouseButtonDown(0) && transform.position.y <= JumpAllowHeight && _rigidbody.velocity.y <= 0.5f)
+        if (Input.GetMouseButton(0) && transform.position.y <= JumpAllowHeight && _rigidbody.velocity.y <= 0.5f)
         {
             var mousePosition = Input.mousePosition;
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);

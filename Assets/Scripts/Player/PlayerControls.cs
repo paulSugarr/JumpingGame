@@ -32,7 +32,7 @@ public class PlayerControls : MonoBehaviour
     }
     private void DiscreteMove()
     {
-        if (Input.GetMouseButton(0) && transform.position.y <= JumpAllowHeight && _rigidbody.velocity.y <= 0.5f)
+        if (Input.GetMouseButton(0) && transform.position.y <= JumpAllowHeight && _rigidbody.velocity.y <= 0f)
         {
             var mousePosition = Input.mousePosition;
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
@@ -55,15 +55,18 @@ public class PlayerControls : MonoBehaviour
     }
     private void ContinousMove()
     {
-        if (Input.GetMouseButton(0) && transform.position.y <= JumpAllowHeight && _rigidbody.velocity.y <= 0.5f)
+        if (Input.GetMouseButton(0) && transform.position.y <= JumpAllowHeight && _rigidbody.velocity.y <= 0f)
         {
             var mousePosition = Input.mousePosition;
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-            var direction = (mousePosition - transform.position).normalized;
+            var position = transform.position;
+            position.y = 0;
+            var direction = (mousePosition - position).normalized;
             _rigidbody.velocity = Vector3.zero;
             _rigidbody.AddForce(direction * _jumpForce * _controlTypeMultiplier, ForceMode2D.Impulse);
         }
     }
+    
 }
 public enum ControlType
 {

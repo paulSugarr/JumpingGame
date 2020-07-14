@@ -670,7 +670,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _score: {fileID: 468644377}
-  _hearts: []
+  _hearts:
+  - {fileID: 53778002}
+  - {fileID: 1811706246}
+  - {fileID: 1125012462}
 --- !u!1 &1125012460
 GameObject:
   m_ObjectHideFlags: 0

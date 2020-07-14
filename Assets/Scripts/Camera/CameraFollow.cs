@@ -9,6 +9,7 @@ public class CameraFollow : MonoBehaviour
     [Range(1f, 40f), SerializeField] private float _smooth;
     private Vector3 _offset;
     [SerializeField] private float _heightFollow;
+    public bool Following = true;
 
     private void Start()
     {
@@ -16,17 +17,20 @@ public class CameraFollow : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Vector3 position = _offset;
-        position.x = _target.position.x;
-        if (_target.position.y >= _heightFollow)
+        if (Following)
         {
-            position.y = Mathf.Lerp(transform.position.y, _target.position.y, 1 / _smooth);
+            Vector3 position = _offset;
+            position.x = _target.position.x;
+            if (_target.position.y >= _heightFollow)
+            {
+                position.y = Mathf.Lerp(transform.position.y, _target.position.y, 1 / _smooth);
+            }
+            else
+            {
+                position.y = Mathf.Lerp(transform.position.y, _heightFollow, 1 / _smooth);
+            }
+            transform.position = position;
         }
-        else
-        {
-            position.y = Mathf.Lerp(transform.position.y, _heightFollow, 1 / _smooth);
-        }
-        transform.position = position;
     }
 
 }

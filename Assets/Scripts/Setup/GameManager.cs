@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -33,5 +34,25 @@ public class GameManager : MonoBehaviour
     #endregion
 
     [SerializeField] private GameObject _player;
+    [SerializeField] private ScoreUpdater _scoreUpdater;
     public static GameObject Player { get => GetInstance()._player; private set => GetInstance()._player = value; }
+    private static ScoreUpdater ScoreUpdater { get => GetInstance()._scoreUpdater; set => GetInstance()._scoreUpdater = value; }
+
+    public static void StopScore()
+    {
+        ScoreUpdater.Updating = false;
+    }
+    public static void RunCoroutine(IEnumerator enumerator)
+    {
+        GetInstance().StartCoroutine(enumerator);
+    }
+
+    public static void LoadScene(int id)
+    {
+        SceneManager.LoadScene(id);
+    }
+    public static void LoadScene(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
 }

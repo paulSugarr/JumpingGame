@@ -34,5 +34,15 @@ public class UIController : MonoBehaviour
     #endregion
 
     [SerializeField] private Text _score;
+    [SerializeField] private List<Image> _hearts;
     public static Text Score { get => GetInstance()._score; private set => GetInstance()._score = value; }
+    public static void SetHealth(int value)
+    {
+        var hearts = GetInstance()._hearts;
+        if (value > hearts.Count || value < 0) { throw new System.ArgumentException(); }
+        for (int i = 0; i < hearts.Count; i++)
+        {
+            hearts[i].gameObject.SetActive(i < value);
+        }
+    }
 }

@@ -724,7 +724,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 53a91d6fd8a67c249a2c879d01ad5322, type: 3}
-  m_Color: {r: 0.6117647, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1374,7 +1374,7 @@ PrefabInstance:
     - target: {fileID: 8429898789597489454, guid: 235a93cc990cd6b47997eb4a8c8557c1,
         type: 3}
       propertyPath: _controlType
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8429898789597489454, guid: 235a93cc990cd6b47997eb4a8c8557c1,
         type: 3}

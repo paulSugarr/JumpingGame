@@ -25,6 +25,9 @@ public class PlayerControls : MonoBehaviour
             case ControlType.Discrete:
                 DiscreteMove();
                 break;
+            case ControlType.Cooldown:
+                CooldownMove();
+                break;
             default:
                 throw new System.Exception("Error in control settings. Type is unknown");
         }
@@ -66,9 +69,13 @@ public class PlayerControls : MonoBehaviour
             _rigidbody.AddForce(direction * _jumpForce * _controlTypeMultiplier, ForceMode2D.Impulse);
         }
     }
-    
+    private void CooldownMove()
+    {
+        throw new System.NotImplementedException();
+    }
+
 }
 public enum ControlType
 {
-    Discrete, Continuous
+    Discrete, Continuous, Cooldown
 }

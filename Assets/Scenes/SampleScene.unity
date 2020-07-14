@@ -1356,6 +1356,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8429898789597489441, guid: 235a93cc990cd6b47997eb4a8c8557c1,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8429898789597489441, guid: 235a93cc990cd6b47997eb4a8c8557c1,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8429898789597489453, guid: 235a93cc990cd6b47997eb4a8c8557c1,
         type: 3}
       propertyPath: m_Name
@@ -1364,17 +1374,22 @@ PrefabInstance:
     - target: {fileID: 8429898789597489454, guid: 235a93cc990cd6b47997eb4a8c8557c1,
         type: 3}
       propertyPath: _controlType
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8429898789597489454, guid: 235a93cc990cd6b47997eb4a8c8557c1,
         type: 3}
       propertyPath: _jumpForce
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8429898789597489454, guid: 235a93cc990cd6b47997eb4a8c8557c1,
         type: 3}
       propertyPath: JumpAllowHeight
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8429898789597489454, guid: 235a93cc990cd6b47997eb4a8c8557c1,
+        type: 3}
+      propertyPath: _cooldownJump
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8429898789597489455, guid: 235a93cc990cd6b47997eb4a8c8557c1,
         type: 3}

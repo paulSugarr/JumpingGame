@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ScoreUpdater : MonoBehaviour
 {
+    public bool Updating = true;
     [SerializeField] private float _speedToScoreMultiplier;
     private BackgroundController _backgroundController;
     private float _subScore;
@@ -14,11 +15,15 @@ public class ScoreUpdater : MonoBehaviour
     }
     private void Update()
     {
-        _subScore += _backgroundController.Speed * Time.deltaTime * _speedToScoreMultiplier;
-        if ((int)_subScore > _score)
+        if (Updating)
         {
-            _score = (int)_subScore;
-            UIController.Score.text = _score.ToString();
+            _subScore += _backgroundController.Speed * Time.deltaTime * _speedToScoreMultiplier;
+            if ((int)_subScore > _score)
+            {
+                _score = (int)_subScore;
+                UIController.Score.text = _score.ToString();
+            }
         }
+
     }
 }

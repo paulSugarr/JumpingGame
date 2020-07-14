@@ -8,17 +8,17 @@ public class PlayerColorChanger : MonoBehaviour
     private SpriteRenderer _sprite;
     private Rigidbody2D _rigidbody;
     private Color _defaultColor;
-    private float _jumpAllowHeight;
+    private PlayerControls _playerControls;
     private void Start()
     {
-        _jumpAllowHeight = GetComponent<PlayerControls>().JumpAllowHeight;
+        _playerControls = GetComponent<PlayerControls>();
         _sprite = GetComponent<SpriteRenderer>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _defaultColor = _sprite.color;
     }
-    private void FixedUpdate()
+    private void Update()
     {
-        if (transform.position.y <= _jumpAllowHeight && _rigidbody.velocity.y <= 0f)
+        if (_playerControls.AllowMove())
         {
             _sprite.color = _color;
         }

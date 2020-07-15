@@ -39,7 +39,7 @@ public class UIController : MonoBehaviour
     public static void SetHealth(int value)
     {
         var hearts = GetInstance()._hearts;
-        if (value > hearts.Count || value < 0) { throw new System.ArgumentException(); }
+        if (value > hearts.Count || value < 0) { return; }
         for (int i = 0; i < hearts.Count; i++)
         {
             hearts[i].gameObject.SetActive(i < value);

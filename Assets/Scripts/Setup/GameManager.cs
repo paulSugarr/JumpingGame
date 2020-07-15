@@ -42,6 +42,10 @@ public class GameManager : MonoBehaviour
     {
         ScoreUpdater.Updating = false;
     }
+    public static void AddScore(int amount)
+    {
+        ScoreUpdater.AddScore(amount);
+    }
     public static void RunCoroutine(IEnumerator enumerator)
     {
         GetInstance().StartCoroutine(enumerator);

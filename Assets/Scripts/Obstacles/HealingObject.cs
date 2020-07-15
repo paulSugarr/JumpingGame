@@ -1,15 +1,16 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-
-public class Obstacle : MonoBehaviour
+public class HealingObject : MonoBehaviour
 {
-    [SerializeField] private int _damage = 1;
+    [SerializeField] private int _healAmount;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var player = collision.GetComponent<PlayerHealth>();
         if (player != null)
         {
-            player.Health -= _damage;
+            player.Health += _healAmount;
             Destroy(gameObject);
         }
     }

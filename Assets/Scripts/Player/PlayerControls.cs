@@ -89,6 +89,12 @@ public class PlayerControls : MonoBehaviour
             Debug.Log((direction * _jumpForce * _controlTypeMultiplier).magnitude);
         }
     }
+
+    private void ProjectionMove()
+    {
+        throw new System.NotImplementedException();
+    }
+
     public bool AllowMove()
     {
         switch (_controlType)

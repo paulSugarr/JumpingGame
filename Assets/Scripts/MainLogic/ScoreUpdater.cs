@@ -24,6 +24,9 @@ public class ScoreUpdater : MonoBehaviour
                 UIController.Score.text = _score.ToString();
             }
         }
-
+    }
+    public void AddScore(int amount)
+    {
+        _subScore += amount;
     }
 }

@@ -277,11 +277,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Current: 0
-  _obstaclePrefabs:
-  - {fileID: 8429898789597489453, guid: 9ff78481ba4ffe8488af1f447d7d70d8, type: 3}
-  _minHeightOffset: 3
-  _dispersionOffset: {x: 1, y: 0}
-  _spawnCooldown: 3
+  _probability: 0.1
+  _prefabObstacle: {fileID: 0}
+  _fieldSize: {x: 100, y: 50}
 --- !u!1 &7574851587180443804
 GameObject:
   m_ObjectHideFlags: 0

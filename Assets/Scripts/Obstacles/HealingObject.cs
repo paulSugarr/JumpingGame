@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealingObject : MonoBehaviour
+public class HealingObject : InteractingObject
 {
     [SerializeField] private int _healAmount;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -11,7 +11,7 @@ public class HealingObject : MonoBehaviour
         if (player != null)
         {
             player.Health += _healAmount;
-            Destroy(gameObject);
+            Destroy();
         }
     }
 }

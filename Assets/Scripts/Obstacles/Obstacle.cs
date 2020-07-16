@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-public class Obstacle : MonoBehaviour
+public class Obstacle : InteractingObject
 {
     [SerializeField] private int _damage = 1;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -10,7 +10,7 @@ public class Obstacle : MonoBehaviour
         if (player != null)
         {
             player.Health -= _damage;
-            Destroy(gameObject);
+            Destroy();
         }
     }
 }

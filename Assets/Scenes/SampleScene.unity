@@ -240,7 +240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -110, y: -216.4}
+  m_AnchoredPosition: {x: -110, y: -216.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &53778002
@@ -551,11 +551,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Current: 1
-  _obstaclePrefabs:
-  - {fileID: 8429898789597489453, guid: 9ff78481ba4ffe8488af1f447d7d70d8, type: 3}
-  _minHeightOffset: 6
-  _dispersionOffset: {x: 1, y: 0}
-  _spawnCooldown: 3
+  _probability: 0
+  _prefabObstacle: {fileID: 0}
+  _fieldSize: {x: 0, y: 0}
 --- !u!212 &629456646
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -708,7 +706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -310, y: -216.4}
+  m_AnchoredPosition: {x: -310, y: -216.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1125012462
@@ -930,6 +928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383a2f4696c736a4088743bb5b4668a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _replaceDispersion: 0
   _damage: 3
 --- !u!61 &1788106528
 BoxCollider2D:
@@ -991,7 +990,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -210, y: -216.4}
+  m_AnchoredPosition: {x: -210, y: -216.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1811706246
@@ -1524,11 +1523,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Current: 1
-  _obstaclePrefabs:
-  - {fileID: 8429898789597489453, guid: 9ff78481ba4ffe8488af1f447d7d70d8, type: 3}
-  _minHeightOffset: 6
-  _dispersionOffset: {x: 1, y: 0}
-  _spawnCooldown: 3
+  _probability: 0
+  _prefabObstacle: {fileID: 0}
+  _fieldSize: {x: 0, y: 0}
 --- !u!1001 &5280443033315185799
 PrefabInstance:
   m_ObjectHideFlags: 0

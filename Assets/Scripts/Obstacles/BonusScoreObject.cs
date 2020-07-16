@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BonusScoreObject : MonoBehaviour
+public class BonusScoreObject : InteractingObject
 {
     [SerializeField] private int _scoreAmount;
 
@@ -12,7 +12,7 @@ public class BonusScoreObject : MonoBehaviour
         if (player != null)
         {
             GameManager.AddScore(_scoreAmount);
-            Destroy(gameObject);
+            Destroy();
         }
 
     }
